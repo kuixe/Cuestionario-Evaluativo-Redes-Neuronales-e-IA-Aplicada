@@ -26,16 +26,17 @@ A diferencia de una red neuronal totalmente conectada, una CNN no necesita conec
 
 Describa las capas principales que componen una CNN típica (Conv2D, MaxPooling2D, Flatten, Dense) y explique la función específica de cada una en el proceso de reconocimiento de imágenes. ¿Por qué es importante el orden de estas capas?
 
-R//1. Conv2D 
+R//
+1.Conv2D 
 Su Función esta en Aplicar filtros a la imagen de entrada para detectar características locales, como bordes, texturas o formas. Cada filtro se desliza sobre la imagen y produce un mapa de activación que destaca dónde aparece ese patrón específico.
 
 2.MaxPooling2D 
 Su Función es Reducir la dimensión espacial de los mapas de activación, manteniendo las características más importantes. Toma el valor máximo dentro de una ventana y descarta el resto, haciendo la red más eficiente y robusta frente a pequeñas variaciones.
 
-3. Flatten 
+3.Flatten 
 Su Función radica en Transforma la salida tridimensional de las capas en un vector unidimensional. Este paso es necesario para conectar la parte convolucional con la parte totalmente conectada. Prepara los datos para la toma de decisiones finales.
 
-4. Dense 
+4.Dense 
 Su Función es que Cada neurona está conectada a todas las neuronas de la capa anterior. Estas capas combinan las características extraídas y aprenden relaciones no lineales complejas entre ellas.
 
 El orden refleja una secuencia lógica de procesamiento de la imagen:
@@ -53,6 +54,7 @@ R// a) Normalizar los valores de los píxeles al rango [0,1] permite que el mode
 b) Convertir las etiquetas al formato "one-hot" significa transformar cada etiqueta de clase en un vector binario en el que solo una posición tiene el valor 1 y las demás son 0. es necesario ya que muchos modelos de clasificación, comparan su salida con vectores one-hot durante el cálculo de la función de pérdida categórica. Sin este formato, el modelo no podría aprender a distinguir entre clases correctamente.
 
 c) dos técnicas de data augmentation que podrían mejorar el rendimiento del modelo podrían ser: 
+
 1.Desplazamiento horizontal:
 Se mueve la imagen hacia la izquierda o derecha unos pocos píxeles.
 
@@ -147,7 +149,9 @@ R//una funcionalidad adicional podría ser el diario emocional inteligente, que 
 Considerando las extensiones propuestas en el taller:
 
 ¿Cuál de las extensiones mencionadas considera más importante implementar primero y por qué?
+
 R//yo considero más importante la integración de un modelo de lenguaje más sofisticado (como BERT o GPT) ya que Mejora la comprensión del lenguaje natural, lo que permite interpretar mejor tanto preguntas académicas como expresiones emocionales sutiles.
 
 ¿Cómo impactarían los avances en modelos de lenguaje como GPT o BERT en este tipo de sistemas?
+
 R// Modelos como GPT o BERT pueden mejorar significativamente estos sistemas ya que Entenderían mejor el lenguaje natural, incluyendo frases ambiguas, emocionales o informales. Permitiendo mantener conversaciones más coherentes y contextuales, recordando lo que el usuario dijo antes.
