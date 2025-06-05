@@ -129,9 +129,11 @@ Consentimiento informado: El usuario debe saber qué datos se recopilan y cómo 
 Privacidad de datos: Toda información que el usuario comparta (imágenes, texto) debe manejarse bajo estrictas políticas de protección, cumpliendo normativas como la Ley de Protección de Datos Personales.
 
 ¿Cómo se podría adaptar el sistema para detectar situaciones que requieran intervención humana?
+
 R//El sistema puede adaptar un módulo de lenguaje emocional con la función de detectar frases asociadas con la depresión o ansiedad. activándose este patrón el sistema puede generar y hacer sonar una alarma para el llamado de una persona profesional 
 
 Proponga una funcionalidad adicional que agregue valor al sistema.
+
 R//una funcionalidad adicional podría ser el diario emocional inteligente, que trata de que el usuario va agregando su día a día de cómo le fue, como se sintió, que actividades realizo y asi el sistema analice estos registros y de tal manera pueda detectar patrones emocionales y Sugerir actividades académicas o de bienestar personal según el estado emocional detectado.
 
 # Pregunta 10 (8 puntos) - Visión Futura Considerando las extensiones propuestas en el taller:
