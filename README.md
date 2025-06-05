@@ -23,13 +23,18 @@ A diferencia de una red neuronal totalmente conectada, una CNN no necesita conec
 
 
 Pregunta 2 (10 puntos) - Arquitectura y Componentes
+
 Describa las capas principales que componen una CNN típica (Conv2D, MaxPooling2D, Flatten, Dense) y explique la función específica de cada una en el proceso de reconocimiento de imágenes. ¿Por qué es importante el orden de estas capas?
+
 R//1. Conv2D 
 Su Función esta en Aplicar filtros a la imagen de entrada para detectar características locales, como bordes, texturas o formas. Cada filtro se desliza sobre la imagen y produce un mapa de activación que destaca dónde aparece ese patrón específico.
+
 2.MaxPooling2D 
 Su Función es Reducir la dimensión espacial de los mapas de activación, manteniendo las características más importantes. Toma el valor máximo dentro de una ventana y descarta el resto, haciendo la red más eficiente y robusta frente a pequeñas variaciones.
+
 3. Flatten 
 Su Función radica en Transforma la salida tridimensional de las capas en un vector unidimensional. Este paso es necesario para conectar la parte convolucional con la parte totalmente conectada. Prepara los datos para la toma de decisiones finales.
+
 4. Dense 
 Su Función es que Cada neurona está conectada a todas las neuronas de la capa anterior. Estas capas combinan las características extraídas y aprenden relaciones no lineales complejas entre ellas.
 
@@ -40,54 +45,78 @@ El orden refleja una secuencia lógica de procesamiento de la imagen:
 -Finalmente, se clasifica o predice el resultado basado en lo aprendido (Dense).
 
 Pregunta 3 (12 puntos) - Preprocesamiento de Datos
+
 En el contexto del dataset CIFAR-10: a) ¿Por qué es necesario normalizar los valores de píxeles al rango [0, 1]? (4 puntos) b) ¿Qué significa convertir las etiquetas a formato "one-hot" y por qué es necesario? (4 puntos) c) Mencione dos técnicas de data augmentation que podrían mejorar el rendimiento del modelo y explique cómo funcionan. (4 puntos)
 
 R// a) Normalizar los valores de los píxeles al rango [0,1] permite que el modelo entrene más rápido y de forma más estable. Esto se debe a que las redes neuronales funcionan mejor cuando los datos de entrada están en una escala similar.
+
 b) Convertir las etiquetas al formato "one-hot" significa transformar cada etiqueta de clase en un vector binario en el que solo una posición tiene el valor 1 y las demás son 0. es necesario ya que muchos modelos de clasificación, comparan su salida con vectores one-hot durante el cálculo de la función de pérdida categórica. Sin este formato, el modelo no podría aprender a distinguir entre clases correctamente.
+
 c) dos técnicas de data augmentation que podrían mejorar el rendimiento del modelo podrían ser: 
 1.Desplazamiento horizontal:
 Se mueve la imagen hacia la izquierda o derecha unos pocos píxeles.
+
 2.Giro aleatorio: 
 Esta técnica consiste en rotar las imágenes en ángulos pequeños, Esto ayuda al modelo a aprender que los objetos siguen siendo los mismos, aunque estén ligeramente girados.
 
 Pregunta 4 (10 puntos) - Optimización y Entrenamiento
 Analice los siguientes aspectos del entrenamiento de una CNN:
+
 ¿Qué función de pérdida se utiliza para clasificación multiclase y por qué?
+
 R// se utiliza la función de pérdida llamada "categorical crossentropy". Esta función mide la diferencia entre la distribución de probabilidad real y la distribución predicha por la red
+
 ¿Cuál es la diferencia entre usar 'adam' y 'sgd' como optimizadores?
+
 R// ADAM Es un optimizador que ajusta automáticamente la tasa de aprendizaje para cada parámetro y sgd Es más simple y requiere definir una tasa de aprendizaje fija, en conclusión, Adam es más rápido y automático por otro lado sgd, aunque sea más manual puede ofrecer mejores resultados y más estables si se configura bien
+
 ¿Cómo se puede detectar y prevenir el overfitting durante el entrenamiento?
-se detecta cuando el modelo empieza a mejorar en los datos de entrenamiento, pero empeora en los datos de validación. Esto indica que está memorizando en lugar de generalizar. Para prevenirlo se pueden usar varias estrategias, entre ellas esta:
+R//se detecta cuando el modelo empieza a mejorar en los datos de entrenamiento, pero empeora en los datos de validación. Esto indica que está memorizando en lugar de generalizar. Para prevenirlo se pueden usar varias estrategias, entre ellas esta:
 -Regularización: apagar aleatoriamente algunas neuronas durante el entrenamiento, obligando a la red a no depender de caminos específicos.
 -Early stopping: detener el entrenamiento cuando la pérdida de validación deja de mejorar.
 
 
 Pregunta 5 (10 puntos) - Transfer Learning
 El taller menciona el uso de MobileNetV2 pre-entrenado. Explique:
+
 ¿Qué es transfer learning y cuáles son sus ventajas?
+
 R// Transfer learning consiste en usar un modelo ya entrenado (como MobileNetV2) en otro problema similar. La ventaja es que ahorra tiempo y recursos, porque el modelo ya aprendió a detectar patrones generales que sirven también para nuevas tareas
+
 ¿Por qué se eligió MobileNetV2 para este proyecto específico?
+
 R// Se eligió MobileNetV2 porque es un modelo ligero, rápido y eficiente, ideal para usar en computadoras comunes o dispositivos móviles.
+
 ¿En qué situaciones sería preferible entrenar un modelo desde cero versus usar transfer learning?
+
 R//se recomienda entrenar un modelo desde cero cuando, Se tiene un dataset muy grande y específico o El problema es muy diferente al que resolvía el modelo preentrenado.
 
 Pregunta 6 (12 puntos) - Procesamiento de Lenguaje Natural
 Respecto al componente NLP del sistema integrado: a) Explique qué es la lemmatización y por qué es importante en el procesamiento de texto. (4 puntos) b) ¿Cómo funcionan los patrones de conversación definidos en el código para identificar intenciones del usuario? (4 puntos) c) Mencione tres técnicas que podrían mejorar la capacidad de comprensión del chatbot. (4 puntos)
+
 R//a) La lemmatizacion es el proceso de reducir una palabra a su forma base, que puede ser sumamente útil para la agrupación en clúster. Su importancia en el procesamiento de texto radica en varios puntos clave los cuales son mejorar la precisión, la optimización de recursos y la normalización de datos
+
 b) Los patrones de conversación definidos en el código, funcionan como filtros que intentan asociar frases o palabras clave del usuario con una intención predefinida. Su funcionamiento se basa en la correspondencia entre la entrada del usuario y estos patrones.
+
 c) Aprendizaje Activo: es una estrategia donde el chatbot, cuando no está seguro de la intención del usuario o de cómo clasificar una entrada, pide aclaraciones al usuario o aprende de las interacciones humanas.
 Manejo avanzado de contexto: guardar y utilizar información de turnos anteriores para interpretar mejor las preguntas y dar respuestas coherentes.
 Incorporación de modelos de lenguaje contextualizados: como BERT o GPT, que entienden mejor el significado según el contexto de la conversación
 
 Pregunta 7 (10 puntos) - Integración de Sistemas
 El taller propone integrar reconocimiento de imágenes con NLP. Describa:
+
 ¿Cuáles son los principales desafíos técnicos de esta integración?
+
 R// Gestión de ambigüedades: A veces, la imagen puede ser ambigua o no contener información clara, lo que dificulta que el chatbot responda adecuadamente sin un contexto textual claro.
 Disponibilidad de Datos Anotados: La escasez y el alto costo de crear grandes conjuntos de datos de imágenes y descripciones textuales alineadas.
 Interpretación coherente de los datos: Los datos visuales y textuales son muy diferentes, por lo que combinarlos para que el sistema entienda ambos contextos simultáneamente es complejo.
+
 ¿Cómo se mantiene el contexto entre el análisis de imágenes y la conversación?
+
 R// La información del contexto se conserva a través de un sistema de administración de diálogos que almacena y vincula datos tanto del reconocimiento de imágenes como de las interacciones anteriores del usuario.
+
 Proponga una mejora específica para hacer más fluida esta integración.
+
 R// Implementar un sistema de memoria contextual persistente que almacene no solo la información inmediata de la imagen y el texto, sino también el historial completo de la conversación y análisis previos. Esto permite que el chatbot recuerde detalles importantes a lo largo del tiempo y pueda hacer referencias cruzadas entre imágenes y diálogos pasados, ofreciendo respuestas más coherentes y personalizadas.
 
 Pregunta 8 (8 puntos) - Análisis de Rendimiento
