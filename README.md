@@ -6,8 +6,7 @@
 # Junio 2025
 
 
-# Pregunta 1 (10 puntos) - Fundamentos de CNN
-Explique qué son las redes neuronales convolucionales (CNN) y por qué son especialmente efectivas para el reconocimiento de imágenes. Mencione al menos tres características distintivas de las CNN que las hacen superiores a las redes neuronales tradicionales para tareas de visión por computadora.
+# Pregunta 1 (10 puntos) - Fundamentos de CNN Explique qué son las redes neuronales convolucionales (CNN) y por qué son especialmente efectivas para el reconocimiento de imágenes. Mencione al menos tres características distintivas de las CNN que las hacen superiores a las redes neuronales tradicionales para tareas de visión por computadora.
 
 R// las redes neuronales convolucionales son un tipo de red neuronal diseñadas para procesar datos con una estructura en forma cuadricula, como las imágenes. y son especialmente efectivas para el reconocimiento de imágenes ya que pueden aprender por ellas mismas características espaciales de las imágenes, lo que les ayuda a identificar patrones como texturas y formas complejas
 Tres características:
