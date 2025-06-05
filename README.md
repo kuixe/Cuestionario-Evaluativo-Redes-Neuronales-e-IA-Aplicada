@@ -56,8 +56,7 @@ Se mueve la imagen hacia la izquierda o derecha unos pocos píxeles.
 2.Giro aleatorio: 
 Esta técnica consiste en rotar las imágenes en ángulos pequeños, Esto ayuda al modelo a aprender que los objetos siguen siendo los mismos, aunque estén ligeramente girados.
 
-# Pregunta 4 (10 puntos) - Optimización y Entrenamiento
-Analice los siguientes aspectos del entrenamiento de una CNN:
+# Pregunta 4 (10 puntos) - Optimización y Entrenamiento Analice los siguientes aspectos del entrenamiento de una CNN:
 
 ¿Qué función de pérdida se utiliza para clasificación multiclase y por qué?
 
@@ -73,8 +72,7 @@ R//se detecta cuando el modelo empieza a mejorar en los datos de entrenamiento, 
 -Early stopping: detener el entrenamiento cuando la pérdida de validación deja de mejorar.
 
 
-# Pregunta 5 (10 puntos) - Transfer Learning
-El taller menciona el uso de MobileNetV2 pre-entrenado. Explique:
+# Pregunta 5 (10 puntos) - Transfer Learning El taller menciona el uso de MobileNetV2 pre-entrenado. Explique:
 
 ¿Qué es transfer learning y cuáles son sus ventajas?
 
@@ -88,8 +86,7 @@ R// Se eligió MobileNetV2 porque es un modelo ligero, rápido y eficiente, idea
 
 R//se recomienda entrenar un modelo desde cero cuando, Se tiene un dataset muy grande y específico o El problema es muy diferente al que resolvía el modelo preentrenado.
 
-# Pregunta 6 (12 puntos) - Procesamiento de Lenguaje Natural
-Respecto al componente NLP del sistema integrado: a) Explique qué es la lemmatización y por qué es importante en el procesamiento de texto. (4 puntos) b) ¿Cómo funcionan los patrones de conversación definidos en el código para identificar intenciones del usuario? (4 puntos) c) Mencione tres técnicas que podrían mejorar la capacidad de comprensión del chatbot. (4 puntos)
+# Pregunta 6 (12 puntos) - Procesamiento de Lenguaje Natural Respecto al componente NLP del sistema integrado: a) Explique qué es la lemmatización y por qué es importante en el procesamiento de texto. (4 puntos) b) ¿Cómo funcionan los patrones de conversación definidos en el código para identificar intenciones del usuario? (4 puntos) c) Mencione tres técnicas que podrían mejorar la capacidad de comprensión del chatbot. (4 puntos)
 
 R//a) La lemmatizacion es el proceso de reducir una palabra a su forma base, que puede ser sumamente útil para la agrupación en clúster. Su importancia en el procesamiento de texto radica en varios puntos clave los cuales son mejorar la precisión, la optimización de recursos y la normalización de datos
 
@@ -99,8 +96,7 @@ c) Aprendizaje Activo: es una estrategia donde el chatbot, cuando no está segur
 Manejo avanzado de contexto: guardar y utilizar información de turnos anteriores para interpretar mejor las preguntas y dar respuestas coherentes.
 Incorporación de modelos de lenguaje contextualizados: como BERT o GPT, que entienden mejor el significado según el contexto de la conversación
 
-# Pregunta 7 (10 puntos) - Integración de Sistemas
-El taller propone integrar reconocimiento de imágenes con NLP. Describa:
+# Pregunta 7 (10 puntos) - Integración de Sistemas El taller propone integrar reconocimiento de imágenes con NLP. Describa:
 
 ¿Cuáles son los principales desafíos técnicos de esta integración?
 
@@ -116,8 +112,7 @@ Proponga una mejora específica para hacer más fluida esta integración.
 
 R// Implementar un sistema de memoria contextual persistente que almacene no solo la información inmediata de la imagen y el texto, sino también el historial completo de la conversación y análisis previos. Esto permite que el chatbot recuerde detalles importantes a lo largo del tiempo y pueda hacer referencias cruzadas entre imágenes y diálogos pasados, ofreciendo respuestas más coherentes y personalizadas.
 
-# Pregunta 8 (8 puntos) - Análisis de Rendimiento
-Para evaluar el desempeño de una CNN: a) ¿Qué información proporciona una matriz de confusión? (4 puntos) b) ¿Cuál es la diferencia entre accuracy, precision y recall? ¿Cuándo es más importante cada métrica? (4 puntos)
+# Pregunta 8 (8 puntos) - Análisis de Rendimiento Para evaluar el desempeño de una CNN: a) ¿Qué información proporciona una matriz de confusión? (4 puntos) b) ¿Cuál es la diferencia entre accuracy, precision y recall? ¿Cuándo es más importante cada métrica? (4 puntos)
 
 R// a) La matriz de confusión muestra cómo se desempeña un modelo de clasificación, al comparar las predicciones del modelo con las etiquetas reales, la matriz de confusion nos proporciona la información de Dónde se cometieron errores, Cuántos ejemplos fueron clasificados correctamente y entre qué clases se confunde el modelo.
 
@@ -125,8 +120,7 @@ b) Accuracy: Proporción total de predicciones correctas. Útil cuando las clase
 Precision: De las veces que el modelo predijo una clase, cuántas veces acertó. Importante cuando los falsos positivos son costosos
 Recall: De todas las veces que una clase debería haber sido detectada, cuántas veces lo fue. Clave cuando los falsos negativos son críticos (por ejemplo, no detectar un objeto peligroso).
 
-# Pregunta 9 (10 puntos) - Casos de Uso Específicos
-El sistema se plantea para apoyo académico y consultas psicológicas básicas. Analice:
+# Pregunta 9 (10 puntos) - Casos de Uso Específicos El sistema se plantea para apoyo académico y consultas psicológicas básicas. Analice:
 
 ¿Qué consideraciones éticas y de privacidad se deben tener en cuenta?
 
@@ -140,8 +134,7 @@ R//El sistema puede adaptar un módulo de lenguaje emocional con la función de 
 Proponga una funcionalidad adicional que agregue valor al sistema.
 R//una funcionalidad adicional podría ser el diario emocional inteligente, que trata de que el usuario va agregando su día a día de cómo le fue, como se sintió, que actividades realizo y asi el sistema analice estos registros y de tal manera pueda detectar patrones emocionales y Sugerir actividades académicas o de bienestar personal según el estado emocional detectado.
 
-# Pregunta 10 (8 puntos) - Visión Futura
-Considerando las extensiones propuestas en el taller:
+# Pregunta 10 (8 puntos) - Visión Futura Considerando las extensiones propuestas en el taller:
 
 ¿Cuál de las extensiones mencionadas considera más importante implementar primero y por qué?
 
