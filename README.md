@@ -11,7 +11,7 @@
 R// las redes neuronales convolucionales son un tipo de red neuronal diseñadas para procesar datos con una estructura en forma cuadricula, como las imágenes. y son especialmente efectivas para el reconocimiento de imágenes ya que pueden aprender por ellas mismas características espaciales de las imágenes, lo que les ayuda a identificar patrones como texturas y formas complejas
 Tres características:
 
-1.Invariancia espacial (traslación, escala y rotación):
+1.Invariancia espacial:
 Gracias a la combinación de convolución y pooling, las CNN desarrollan cierta invariancia a pequeñas transformaciones espaciales, como traslaciones, escalas o rotaciones leves. Esto significa que pueden reconocer un objeto aunque esté en diferentes posiciones o tamaños dentro de la imagen.
 
 2.Submuestreo o pooling:
