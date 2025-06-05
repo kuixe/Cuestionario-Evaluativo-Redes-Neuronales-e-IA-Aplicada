@@ -21,9 +21,7 @@ Las capas de pooling reducen la dimensionalidad de la imagen manteniendo las car
 A diferencia de una red neuronal totalmente conectada, una CNN no necesita conectar todos los píxeles con cada neurona.
 
 
-# Pregunta 2 (10 puntos) - Arquitectura y Componentes
-
-Describa las capas principales que componen una CNN típica (Conv2D, MaxPooling2D, Flatten, Dense) y explique la función específica de cada una en el proceso de reconocimiento de imágenes. ¿Por qué es importante el orden de estas capas?
+# Pregunta 2 (10 puntos) - Arquitectura y Componentes Describa las capas principales que componen una CNN típica (Conv2D, MaxPooling2D, Flatten, Dense) y explique la función específica de cada una en el proceso de reconocimiento de imágenes. ¿Por qué es importante el orden de estas capas?
 
 R//
 1.Conv2D 
@@ -44,9 +42,7 @@ El orden refleja una secuencia lógica de procesamiento de la imagen:
 -Después se preparan los datos para la toma de decisiones (Flatten).
 -Finalmente, se clasifica o predice el resultado basado en lo aprendido (Dense).
 
-# Pregunta 3 (12 puntos) - Preprocesamiento de Datos
-
-En el contexto del dataset CIFAR-10: a) ¿Por qué es necesario normalizar los valores de píxeles al rango [0, 1]? (4 puntos) b) ¿Qué significa convertir las etiquetas a formato "one-hot" y por qué es necesario? (4 puntos) c) Mencione dos técnicas de data augmentation que podrían mejorar el rendimiento del modelo y explique cómo funcionan. (4 puntos)
+# Pregunta 3 (12 puntos) - Preprocesamiento de Datos En el contexto del dataset CIFAR-10: a) ¿Por qué es necesario normalizar los valores de píxeles al rango [0, 1]? (4 puntos) b) ¿Qué significa convertir las etiquetas a formato "one-hot" y por qué es necesario? (4 puntos) c) Mencione dos técnicas de data augmentation que podrían mejorar el rendimiento del modelo y explique cómo funcionan. (4 puntos)
 
 R// a) Normalizar los valores de los píxeles al rango [0,1] permite que el modelo entrene más rápido y de forma más estable. Esto se debe a que las redes neuronales funcionan mejor cuando los datos de entrada están en una escala similar.
 
